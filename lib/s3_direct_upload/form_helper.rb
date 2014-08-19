@@ -79,7 +79,7 @@ module S3DirectUpload
             ["starts-with", "$x-requested-with", ""],
             ["content-length-range", 0, @options[:max_file_size]],
             ["starts-with","$content-type", @options[:content_type_starts_with] ||""],
-            {'x-amz-security-token': @options[:aws_security_token]},
+            {'x-amz-security-token' => @options[:aws_security_token]},
             {bucket: @options[:bucket]},
             {acl: @options[:acl]},
             {success_action_status: "201"}
