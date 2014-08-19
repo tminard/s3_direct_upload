@@ -50,7 +50,7 @@ module S3DirectUpload
           :key => @options[:key] || key,
           :acl => @options[:acl],
           "AWSAccessKeyId" => @options[:aws_access_key_id],
-          'x-amz-security-token' => @options[:aws_security_token]
+          'x-amz-security-token' => @options[:aws_security_token],
           :policy => policy,
           :signature => signature,
           :success_action_status => "201",
